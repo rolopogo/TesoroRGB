@@ -23,8 +23,14 @@ Thread.Sleep(100);
 kb.SetLightingMode(LightingMode.SpectrumColors, SpectrumMode.SpectrumBreathing, TesoroProfile.PC);
 Thread.Sleep(100);
 
-// Set the keys to display the contents of
+// Set the keys to display the contents of an image file
 kb.SetKeysColor("test.png", TesoroProfile.PC, false);
+
+// Set the keys to display the contents of a Bitmap object
+kb.SetKeysColor(bitmap, TesoroProfile.PC, false);
+
+// Set individual key color
+kb.SetKeyColor(TesoroLedID.Escape, 255, 0, 0, TesoroProfile.PC);
 
 // Save Layout
 kb.SaveSpectrumColors(TesoroProfile.PC);
